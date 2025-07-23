@@ -3,20 +3,43 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		 
+		<title>Practicas Vainilla</title>
 	</head>
 	<body>
-		<slot />
+    <main>
+      <slot />
+    </main>
 	</body>
 </html>
 
-<style>
+<style is:global>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  :root{
+    /* --color-verde: #99b898;
+    --color-pastel: #Fecea8;
+    --color-naranja: #ff847c;
+    --color-rojo: #e84a5f;
+    --color-negro: #2a363b;
+    --texto: #ffe9e0; */
+
+    --color-azul-oscuro: #000f3f;
+    --color-azul: #014494;
+    --color-verde-azulado: #03787f;
+    --color-celeste: #01a8e2;
+    --color-azul-claro: #61eaff;
+    --texto: #ffe9e0;
+  }
+
 	html,
 	body {
-		margin: 0;
 		width: 100%;
 		height: 100%;
+    background: var(--color-azul-oscuro);
+    color: var(--texto);
 	}
 </style>
