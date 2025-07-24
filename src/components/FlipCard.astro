@@ -5,7 +5,7 @@ import WebIcon from '../assets/icons/web.svg'
 import LinkedInIcon from '../assets/icons/linkedin.svg'
 ---
 <section class="container">
-  <section>
+  <section id="flip-card">
     <article class="front">
       <div class="image">
         <img src={userLogo.src} alt="Foto de perfil de usuario" fetchpriority="high">
@@ -63,7 +63,6 @@ import LinkedInIcon from '../assets/icons/linkedin.svg'
         flex-direction: row;
         gap: 1rem;
         position: absolute;     
-        
       }
 
       & > .front {
@@ -128,10 +127,18 @@ import LinkedInIcon from '../assets/icons/linkedin.svg'
     }
   }
 
+  .paused {
+    animation-play-state: paused !important;
+  }
+
   @keyframes flip {
     0% { transform: rotateY(0deg);}
     100% { transform: rotateY(360deg)}
   }
 </style>
 
-<script></script>
+<script>
+  const card  = document.querySelector('#flip-card') as HTMLElement
+  card.addEventListener('mouseenter', () => card.classList.add('paused'));
+  card.addEventListener('mouseleave', () => card.classList.remove('paused'));
+</script>
