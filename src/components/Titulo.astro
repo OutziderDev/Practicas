@@ -1,0 +1,42 @@
+---
+const { titulo, align }  = Astro.props as { titulo: string, align: string };
+---
+<h2>
+  { titulo }
+</h2>
+
+<style>
+  h2 {
+    padding-inline: 5rem;
+    text-align: center;
+    padding-block: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    gap:1rem;
+    align-items:center;
+    font-size: 2rem;
+    color: var(--colot-texto);
+
+    @media ( width >= 1024px) {
+      &::after, &::before  {
+        content: '';
+        display: block;
+        flex-grow: 1;
+        height: 1px;
+        background: linear-gradient( to right, var(--color-celeste),var(--color-azul-claro),var(--color-verde-azulado));
+        background-size: 300% 100%;
+        animation: moveGradient 2s linear alternate infinite;
+      }
+    }
+  }
+
+  @keyframes moveGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+</style>

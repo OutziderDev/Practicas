@@ -47,7 +47,7 @@ import LinkedInIcon from '../assets/icons/linkedin.svg'
       margin: 3rem auto;
       position: relative;
       transform-style: preserve-3d;
-      animation: flip 10s infinite linear; 
+      animation: flip 15s infinite linear; 
 
       & > .front, .back {
         background-color: var(--color-azul);
@@ -139,7 +139,8 @@ import LinkedInIcon from '../assets/icons/linkedin.svg'
 
   @keyframes flip {
     0% { transform: rotateY(0deg);}
-    100% { transform: rotateY(360deg)}
+    50% { transform: rotateY(360deg)}
+    100% { transform: rotateY(0deg);}
   }
 </style>
 
