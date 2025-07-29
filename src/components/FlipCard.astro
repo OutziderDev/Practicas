@@ -5,10 +5,10 @@ import WebIcon from '../assets/icons/web.svg'
 import LinkedInIcon from '../assets/icons/linkedin.svg'
 ---
 <section class="container">
-  <section id="flip-card">
+  <div id="flip-card" class="flip-card">
     <article class="front">
       <div class="image">
-        <img src={userLogo.src} alt="Foto de perfil de usuario" fetchpriority="high">
+        <img src={userLogo.src} alt="Foto de perfil de usuario" loading="eager" fetchpriority="high">
       </div>
       <div class="info">
         <h1>Outzider Dev</h1>
@@ -30,19 +30,18 @@ import LinkedInIcon from '../assets/icons/linkedin.svg'
         <p>LinkedIn</p>
       </a>
     </article>
-  </section>  
+  </div>  
 </section>
 
 
-<style>
+<style >
   .container {
     width: 100%;
     height: 100%;
     position: relative;
     perspective: 2000px;
-    
 
-    & > section {
+    & > .flip-card {
       width: 600px;
       height: 350px;
       margin: 3rem auto;
