@@ -1,0 +1,20 @@
+---
+import { Image } from "astro:assets"
+import logo from '@/assets/images/PracticasLogo.png'
+---
+<section class="container-jumbo">
+  <Image src={logo} alt={"Practicas Vainilla by Outzider - Branding"} priority/> 
+</section>
+
+<style>
+  .container-jumbo{
+    width: 100%;
+    display: flex;
+    
+    & > img {
+      width: 300px;
+      height: 300px;
+      margin-inline: auto;
+    }
+  }
+</style>

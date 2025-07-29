@@ -3,12 +3,13 @@ import userLogo from '../assets/images/perro programador.webp'
 import GitHubIcon from '../assets/icons/github.svg'
 import WebIcon from '../assets/icons/web.svg'
 import LinkedInIcon from '../assets/icons/linkedin.svg'
+import Image from 'astro/components/Image.astro'
 ---
 <section class="container">
   <div id="flip-card" class="flip-card">
     <article class="front">
       <div class="image">
-        <img src={userLogo.src} alt="Foto de perfil de usuario" loading="eager" fetchpriority="high">
+        <Image src={userLogo} priority alt="Foto de perfil de usuario" fetchpriority={"high"}/>
       </div>
       <div class="info">
         <h1>Outzider Dev</h1>
@@ -17,15 +18,15 @@ import LinkedInIcon from '../assets/icons/linkedin.svg'
     </article>
 
     <article class="back">
-      <a href="#" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/OutziderDev/" target="_blank" rel="noopener noreferrer">
         <GitHubIcon />
         <p>GitHub</p>
       </a>
-      <a href="#" target="_blank" rel="noopener noreferrer">
+      <a href="https://portafolio-dev-bay.vercel.app/" target="_blank" rel="noopener noreferrer">
         <WebIcon stroke={"white"}/>
         <p>Portafolio</p>
       </a>
-      <a href="#" target="_blank" rel="noopener noreferrer">
+      <a href="www.linkedin.com/in/luisbarriosdeleon" target="_blank" rel="noopener noreferrer">
         <LinkedInIcon />
         <p>LinkedIn</p>
       </a>
