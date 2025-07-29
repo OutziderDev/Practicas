@@ -3,13 +3,12 @@ import userLogo from '../assets/images/perro programador.webp'
 import GitHubIcon from '../assets/icons/github.svg'
 import WebIcon from '../assets/icons/web.svg'
 import LinkedInIcon from '../assets/icons/linkedin.svg'
-import Image from 'astro/components/Image.astro'
 ---
 <section class="container">
   <div id="flip-card" class="flip-card">
     <article class="front">
       <div class="image">
-        <Image src={userLogo} priority alt="Foto de perfil de usuario" fetchpriority={"high"}/>
+        <img src={userLogo.src}  alt="Foto de perfil de usuario" fetchpriority="high">
       </div>
       <div class="info">
         <h1>Outzider Dev</h1>
