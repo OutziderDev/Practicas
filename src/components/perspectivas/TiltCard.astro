@@ -30,10 +30,12 @@
     background-color: var(--color-azul);
     color: var(--color-texto);
     border-radius: 1rem;
-    transform: rotatey(45deg);
+    /* transform: rotatey(45deg); */
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.2s ease;
+  will-change: transform;
   }
 
   .data-tilt-card{
@@ -84,3 +86,21 @@
   }
 </style>
 
+<script lang="javascript">
+  const containerPadre = document.querySelector('.container-tilt')
+  console.log('padre', containerPadre)
+  const cardTilt = document.querySelector('.card-container-tilt')
+  console.log('tilt', cardTilt)
+
+  containerPadre?.addEventListener('mousemove', (e  => {
+    const {width, height, left, top } = containerPadre.getBoundingClientRect();
+    const x = e.clientX  - left;
+    const y = e.clientY - top;
+
+    const rotateX = ((y / height) - 0.5) * -30;
+    const rotateY = ((x / width) - 0.5) * 30;
+
+    cardTilt?.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)  `;
+  }))
+
+</script>
