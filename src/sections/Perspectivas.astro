@@ -2,12 +2,14 @@
 import FlipBox from '@/components/perspectivas/FlipBox.astro'
 import FlipCard from '@/components/perspectivas/FlipCard.astro'
 import Titulo from '@/components/Titulo.astro'
+import TiltCard from '@/components/perspectivas/TiltCard.astro'
 ---
 <section>
   <Titulo titulo="Perspectivas en CSS" align="center" />
   <div class="container">
+    <TiltCard />
+    <!-- <FlipBox /> -->
     <FlipCard />
-    <FlipBox />
   </div>
 </section>
 
@@ -17,12 +19,12 @@ import Titulo from '@/components/Titulo.astro'
     height: 100%;
     padding: 0.5rem;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
     gap: 0.5rem;
 
     @media ( width < 1024px){
-      flex-direction: column;
+      grid-template-columns: 1fr;
       gap: 5rem;
     }
   }

@@ -1,0 +1,30 @@
+---
+---
+<section class="container-tilt">
+  <div class="card-container-tilt">
+    hola
+  </div>
+</section>
+
+<style>
+  .container-tilt{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    background-color: #0003;
+  }
+
+  .card-container-tilt{
+    box-sizing: border-box;
+    width: 500px;
+    height: 300px;
+    background-color: var(--color-azul);
+    color: var(--color-texto);
+    border-radius: 1rem;
+    transform: rotatey(45deg);
+  }
+</style>
