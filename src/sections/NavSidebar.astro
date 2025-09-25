@@ -1,0 +1,24 @@
+---
+import brand from "@/assets/images/perro.webp"
+---
+<aside>
+  <header>
+    <img src={brand.src} alt="">
+  </header>
+</aside>
+
+<style>
+  aside {
+    width: 20%;
+    background-color: red;
+    min-height: 100dvh;
+  }
+
+  header {
+    width: 100%;
+
+    & > img {
+      width: 100%;
+    }
+  }
+</style>
