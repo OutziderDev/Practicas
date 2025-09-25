@@ -3,8 +3,23 @@ import brand from "@/assets/images/perro.webp"
 ---
 <aside>
   <header>
-    <img src={brand.src} alt="">
+    <h1 class="sr-only">El taller by Outzider</h1>
+    <a href="http://github.com/tailwindlabs" target="_blank" rel="noopener noreferrer">
+      <div class="layoutFrontal">
+        <img src={brand.src} alt="" aria-label="imagen de branding">
+      </div>
+      <div class="layoutTrasero"> 
+        <img src="" alt="">
+      </div>
+    </a>
   </header>
+
+  <section>
+    <details>
+      <a href="">casa</a>
+      <a href="">piso</a>
+    </details>
+  </section>
 </aside>
 
 <style>
@@ -17,8 +32,21 @@ import brand from "@/assets/images/perro.webp"
   header {
     width: 100%;
 
-    & > img {
+    & > a {
       width: 80%;
+      display: flex;
+      margin: auto;
+      transform-style: preserve-3d;
+      perspective: 100px;
+
+      & > .layoutFrontal {
+
+        & > img {
+          width: 100%;
+          border-radius: 100%;
+        }
+      }
+      
     }
   }
 </style>
