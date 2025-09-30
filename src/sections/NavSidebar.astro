@@ -1,6 +1,7 @@
 ---
 import brand from "@/assets/images/perro.webp"
-import GitIcon from "@/assets/icons//github.svg"
+import GitIcon from "@/assets/icons/github.svg"
+import FileIcon from "@/assets/icons/file.svg"
 ---
 <aside>
   <header>
@@ -16,12 +17,12 @@ import GitIcon from "@/assets/icons//github.svg"
   </header>
 
   <nav>
-    <a href="">Perspectiva </a>
-    <a href="">Grandientes </a>
-    <a href="">Degradados</a>
-    <a href="">Bordes</a>
-    <a href="">Máscara</a>
-    <a href="">Filtros</a>
+    <a href=""> <FileIcon /> Perspectiva </a>
+    <a href="" class="active"> <FileIcon /> Grandientes </a>
+    <a href=""> <FileIcon /> Degradados</a>
+    <a href=""> <FileIcon /> Bordes</a>
+    <a href="" class="active"> <FileIcon /> Máscara</a>
+    <a href="" class="active"> <FileIcon /> Filtros</a>
   </nav>
   
 </aside>
@@ -82,10 +83,26 @@ import GitIcon from "@/assets/icons//github.svg"
       width: 100%;
       text-decoration: none;
       background-color: var(--color-azul-oscuro);
-      color: var(--color-texto);
+      color: var(--color-texto-sombra);
       padding: 0.5rem 1rem;
       font-size: 1.3rem;
       display: flex;
+      align-items: center;
+      gap: 1.3rem;
+      border-left: 0.5rem solid var(--color-azul-oscuro);
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-left: 0.5rem solid var(--color-azul-fondo);
+        background-color: var(--color-azul-fondo);
+        color: var(--color-texto);
+      }
+    }
+
+    & > .active {
+      color: var(--color-texto);
+      background-color: var(--color-azul);
+      border-left: 0.5rem solid var(--color-celeste);
     }
   }
 
