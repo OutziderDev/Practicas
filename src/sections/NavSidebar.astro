@@ -7,14 +7,14 @@ import HomeIcon from "@/assets/icons/home.svg"
 <aside>
   <header>
     <h1 class="sr-only">El taller by Outzider</h1>
-    <div class="layoutBranding">
+    <a class="layoutBranding" href=""  rel="noopener noreferrer">
       <div class="layoutFront">
         <img src={brand.src} alt="">
       </div>
       <div class="layoutBack">
         <GitIcon />
       </div>
-    </div>
+    </a>
   </header>
 
   <nav>
@@ -39,21 +39,32 @@ import HomeIcon from "@/assets/icons/home.svg"
   header {
     margin-block: 1rem;
     perspective: 1200px;
+    position: relative;
 
     & > .layoutBranding {
-      /* animation: rotatecard 3s infinite linear; */
+      display: block;
       width: 100%;
       position: relative;
+      animation: rotatecard 3s infinite linear;
+      cursor: pointer;
+      transform-style: preserve-3d;
 
       & > .layoutFront, & > .layoutBack {
         display: flex;
         justify-content: center;
         align-items: center;
+       
+        backface-visibility: hidden;
 
         & > img, & > svg {
           width: 75%;
           border-radius: 100%;
+          position: absolute;
         }
+      }
+
+      & > .layoutBack {
+         transform: rotateY(180deg);
       }
 
     }
