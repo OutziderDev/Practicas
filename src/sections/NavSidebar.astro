@@ -2,17 +2,23 @@
 import brand from "@/assets/images/perro.webp"
 import GitIcon from "@/assets/icons/github.svg"
 import FileIcon from "@/assets/icons/file.svg"
+import HomeIcon from "@/assets/icons/home.svg"
 ---
 <aside>
   <header>
     <h1 class="sr-only">El taller by Outzider</h1>
     <div class="layoutBranding">
-      <img src={brand.src} alt="">
+      <div class="layoutFront">
+        <img src={brand.src} alt="">
+      </div>
+      <div class="layoutBack">
+        <GitIcon />
+      </div>
     </div>
   </header>
 
   <nav>
-     
+    <a href="" class="active"> <HomeIcon /> Inicio</a>
     <a href=""> <FileIcon /> Perspectiva </a>
     <a href="" class="active"> <FileIcon /> Grandientes </a>
     <a href=""> <FileIcon /> Degradados</a>
@@ -37,14 +43,19 @@ import FileIcon from "@/assets/icons/file.svg"
     & > .layoutBranding {
       /* animation: rotatecard 3s infinite linear; */
       width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      position: relative;
 
-      & > img, & > svg {
-        width: 75%;
-        border-radius: 100%;
+      & > .layoutFront, & > .layoutBack {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > img, & > svg {
+          width: 75%;
+          border-radius: 100%;
+        }
       }
+
     }
   }
 
