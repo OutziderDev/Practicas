@@ -40,11 +40,14 @@ import HomeIcon from "@/assets/icons/home.svg"
     margin-block: 1rem;
     perspective: 1200px;
     position: relative;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     & > .layoutBranding {
       display: block;
       width: 100%;
-      position: relative;
       animation: rotatecard 3s infinite linear;
       cursor: pointer;
       transform-style: preserve-3d;
@@ -57,7 +60,7 @@ import HomeIcon from "@/assets/icons/home.svg"
         backface-visibility: hidden;
 
         & > img, & > svg {
-          width: 75%;
+          width: 70%;
           border-radius: 100%;
           position: absolute;
         }
