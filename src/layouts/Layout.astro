@@ -25,6 +25,14 @@ import NavSidebar from "@/sections/NavSidebar.astro";
   }
 
   :root{
+    /* Colores */
+    --color-fondo: #270c13;
+    --color-fondo-secundario: #1d5a5d;
+    --color-feo: #1bc;
+    --color-fe:  #1ab8c1; 
+    --main: rgb(60, 236, 214);
+    --color-texto-prime: #ecae63;
+    /* ---- */
     --color-azul-oscuro: #000f3f;
     --color-azul-fondo: #02134d;
     --color-azul: #014494;
@@ -33,6 +41,10 @@ import NavSidebar from "@/sections/NavSidebar.astro";
     --color-verde-azulado: #03787f;
     --color-texto: #ffe9e0;
     --color-texto-sombra: #ab9e99;
+    /* Fuentes */
+    --texto-titulo-general: 'Overlock', italic;
+    --texto-titulo-emergente: 'Mada Variable', sans-serif;
+    --texto-basico: 'Maitree', serif;
   }
 
   @font-face {
@@ -71,12 +83,12 @@ import NavSidebar from "@/sections/NavSidebar.astro";
 
 	body {
 		width: 100%;
-    background: var(--color-azul-fondo);
+    background: var(--color-feo);
     color: var(--texto);
     display: flex;
 	}
 
-  main{
+  main {
     flex: 1;
   }
 
