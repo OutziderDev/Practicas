@@ -3,18 +3,20 @@ import brand from "@/assets/images/perro.webp"
 import GitIcon from "@/assets/icons/github.svg"
 import FileIcon from "@/assets/icons/file.svg"
 import HomeIcon from "@/assets/icons/home.svg"
+import Logo from "@/assets/images/logo.png"
 ---
 <aside>
   <header>
     <h1 class="sr-only">El taller by Outzider</h1>
-    <a class="layoutBranding" href=""  rel="noopener noreferrer">
+    <img src={Logo.src} alt="">
+    <!-- <a class="layoutBranding" href=""  rel="noopener noreferrer">
       <div class="layoutFront">
-        <img src={brand.src} alt="">
+        <img src={Logo.src} alt="">
       </div>
       <div class="layoutBack">
         <GitIcon />
       </div>
-    </a>
+    </a> -->
   </header>
 
   <nav>
@@ -44,6 +46,10 @@ import HomeIcon from "@/assets/icons/home.svg"
     display: flex;
     justify-content: center;
     align-items: center;
+
+    img {
+      width: 100%;
+    }
 
     & > .layoutBranding {
       display: block;
@@ -103,7 +109,7 @@ import HomeIcon from "@/assets/icons/home.svg"
     & > .active {
       color: black;
       font-weight: bold;
-      background-color: var(--color-fe);
+      background-color: var(--color-feo);
       border-left: 0.5rem solid var(--color-celeste);
     }
   }
