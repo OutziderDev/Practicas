@@ -1,13 +1,14 @@
 ---
 import NavSidebar from "@/sections/NavSidebar.astro";
+const title = Astro.props.title || "El taller de OutziderDev";
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Practicas Vainilla</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{title}</title>
 	</head>
 	<body>
     <NavSidebar />
@@ -46,6 +47,14 @@ import NavSidebar from "@/sections/NavSidebar.astro";
     --texto-titulo-general: 'Overlock', italic;
     --texto-titulo-emergente: 'Mada Variable', sans-serif;
     --texto-basico: 'Maitree', serif;
+
+    /* oficiales */
+    --color-verdoso: #53c9b1;
+    --color-verdoso-mod: #5adabc;
+    --color-darkblue: #0a0f1e;
+    --color-light-darkblue: #101828;
+    --color-decorador: #192238;
+    --color-naranja: #fb8f51;
   }
 
   @font-face {
