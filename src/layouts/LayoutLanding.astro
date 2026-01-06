@@ -12,6 +12,9 @@ const title = Astro.props.title || "El taller de OutziderDev";
 	</head>
 	<body>
     <!-- <NavSidebar /> -->
+     <div class="color1"></div>
+     <div class="color2"></div>
+     <div class="color3"></div>
     <main>
       <slot />
     </main>
@@ -27,36 +30,25 @@ const title = Astro.props.title || "El taller de OutziderDev";
 
   :root{
     /* Colores */
-    --color-fondo: rgb(19, 19, 23);
-    --color-fondo-muted: rgb(26, 27, 37); 
-    --color-fondo-secundario: #1d5a5d;
-    --color-feo: #1bc;
-    --color-fe:  #1ab8c1; 
-    --main: rgb(60, 236, 214);
-    --color-texto-prime: #ecae63;
-    /* ---- */
-    --color-azul-oscuro: #000f3f;
-    --color-azul-fondo: #02134d;
-    --color-azul: #014494;
-    --color-azul-claro: #61eaff;
-    --color-celeste: #01a8e2;
-    --color-verde-azulado: #03787f;
-    --color-texto: #ffe9e0;
-    --color-texto-sombra: #ab9e99;
+    --color-fondo: #131317;
+    --color-fondo-muted: #1a1b25; 
+    --color-fondo-claro: #212433;
+    --color-principal: #3cecd6;
+    --texto-muted: #a7acd1;
+    --color-naranja: #fb8f51;
+
+    
     /* Fuentes */
     --texto-titulo-general: 'Overlock', italic;
     --texto-titulo-emergente: 'Mada Variable', sans-serif;
     --texto-basico: 'Maitree', serif;
 
-    /* oficiales */
-    --color-verdoso: #53c9b1;
-    --color-verdoso-mod: #5adad1;
+    /* colores para opciones */
+    /*--color-verdoso-mod: #5adad1;
     --color-darkblue: #0a0f1e;
     --color-light-darkblue: #101828;
-    --color-decorador: #192238;
-    --color-naranja: #fb8f51;
+    --color-decorador: #192238; */
   }
-
   @font-face {
     font-family: 'Maitree';
     font-style: normal;
@@ -93,10 +85,25 @@ const title = Astro.props.title || "El taller de OutziderDev";
 
 	body {
 		width: 100%;
-    background: var(--color-fondo-muted);
+    background: black;
     color: var(--texto);
     display: flex;
 	}
+  .color1 {
+    background-color: var(--color-verdoso-mod);
+    width: 200px;
+    height: 200px;
+  }
+  .color2 {
+    background-color: var(--expres);
+    width: 200px;
+    height: 200px;
+  }
+  .color3 {
+    background-color: var(--color-feo);
+    width: 200px;
+    height: 200px;
+  }
 
   main {
     flex: 1;
