@@ -33,9 +33,16 @@
 <style  >
   header {
     font-size: 1.2rem;
-    width: 100dvw;
+    padding: 0.2rem;
+    width: 100%;
     background: transparent;
-    border-bottom: 2px solid  var(--color-principal);
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient( to right, transparent, var(--color-principal), transparent);
+    border-image-slice: 0.5;
+
+    animation: header-blur-scroll 0.3s linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0 350px;
 
     & .container {
       max-width: 70dvw;
@@ -108,4 +115,14 @@
     }
   }
 
+  @keyframes header-blur-scroll {
+    0% {
+      backdrop-filter: blur(0px);
+      background: transparent;
+    }
+    100% {
+      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
 </style>
