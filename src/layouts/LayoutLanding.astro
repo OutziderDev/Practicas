@@ -37,9 +37,6 @@ import Footer from '@/sections/Footer.astro'
     --color-naranja: #fb8f51;
     
     /* Fuentes */
-    --texto-titulo-general: 'Overlock', italic;
-    --texto-titulo-emergente: 'Mada Variable', sans-serif;
-    --texto-basico: 'Maitree', serif;
     --texto-prueba: 'Sintony', system-ui, sans-serif;
 
     /* colores para opciones */
@@ -59,35 +56,15 @@ import Footer from '@/sections/Footer.astro'
 
   html {
     scroll-behavior: smooth;
-    scrollbar-color: var(--color-celeste) var(--color-azul-oscuro);
+    scrollbar-color: rgb(8, 163, 163) var(--color-fondo);
   }
 
 	body {
 		width: 100%;
     height: 100%;
-    background: var(--color-fondo-claro);
-    color: var(--texto);
-    display: flex;
+    background: var(--color-fondo );
 	}
-  .color1 {
-    background-color: var(--color-verdoso-mod);
-    width: 200px;
-    height: 200px;
-  }
-  .color2 {
-    background-color: var(--expres);
-    width: 200px;
-    height: 200px;
-  }
-  .color3 {
-    background-color: var(--color-feo);
-    width: 200px;
-    height: 200px;
-  }
 
-  main {
-    flex: 1;
-  }
 
   /* Clases de Utilidades */
   .sr-only {
