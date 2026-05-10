@@ -12,6 +12,7 @@
     "astro": "5.16.6"
   },
   "devDependencies": {
+    "oxfmt": "^0.48.0",
     "oxlint": "1.18.0"
   }
 }
